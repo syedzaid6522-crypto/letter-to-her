@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Love Letter for Anbar Ahmedi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f0f0f;
+            --bg-card: #1a1a1a;
+            --text-light: #f5f5f5;
+            --text-gold: #d4af37;
+            --text-muted: #a0a0a0;
+            --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #d4af37 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: var(--bg-dark);
+            background-image: 
+                radial-gradient(ellipse at top, #1f1f1f 0%, transparent 50%),
+                radial-gradient(ellipse at bottom, #1a1510 0%, transparent 50%);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 580px;
+            position: relative;
+        }
+
+        .page {
+            background: var(--bg-card);
+            border-radius: 4px;
+            padding: 50px 40px;
+            box-shadow: 
+                0 25px 80px rgba(0,0,0,0.8),
+                0 0 1px rgba(212,175,55,0.3);
+            border: 1px solid #2a2a2a;
+            border-top: 3px solid var(--text-gold);
+            display: none;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .greeting {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.2rem;
+            color: var(--text-gold);
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.4;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subject-text {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.4rem;
+            color: var(--text-gold);
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+        }
+
+        .content {
+            font-size: 1.25rem;
+            line-height: 1.9;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .content p {
+            margin-bottom: 25px;
+            text-indent: 30px;
+        }
+
+        .content p:first-of-type {
+            margin-top: 10px;
+        }
+
+        .heart {
+            color: var(--text-gold);
+            font-size: 1.1rem;
+            display: inline-block;
+            animation: heartbeat 1.8s ease-in-out infinite;
+            margin-left: 5px;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            15% { transform: scale(1.2); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.15); }
+            60% { transform: scale(1); }
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+            font-style: italic;
+            color: var(--text-gold);
+            font-size: 1.3rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        button {
+            background: transparent;
+            color: var(--text-gold);
+            border: 1px solid var(--text-gold);
+            padding: 12px 30px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background: var(--text-gold);
+            color: var(--bg-dark);
+        }
+
+        button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        button:disabled:hover {
+            background: transparent;
+            color: var(--text-gold);
+        }
+
+        .page-number {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 480px) {
+            .page { padding: 35px 25px; }
+            .greeting { font-size: 1.8rem; }
+            .content { font-size: 1.15rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- PAGE 1: GREETING -->
+    <div class="page active" id="page1">
+        <div class="greeting">Hey, my love Anbar Ahmedi<span class="heart">♥</span></div>
+        <div class="content" style="text-align: center;">
+            <p>Today, I wanted to do something different — not just a text message that disappears, but words that stay, words I can hold onto forever, just like I hold onto you in my heart.</p>
+            <p>So I crafted this little digital letter for you. Three pages, just like our story — each one a new chapter, each one meaningful.</p>
+            <p>Shall we begin?</p>
+        </div>
+        <div class="nav">
+            <button disabled>Back</button>
+            <button onclick="showPage(2)">Next</button>
+        </div>
+        <div class="page-number">1 / 3</div>
+    </div>
+
+    <!-- PAGE 2: SUBJECT -->
+    <div class="page" id="page2">
+        <div class="subject-text">A Letter of Love</div>
+        <div class="content" style="text-align: center;">
+            <p>The subject of this letter is simple, yet it carries the weight of everything I feel for you:</p>
+            <p style="font-size: 1.5rem; color: var(--text-gold); text-indent: 0; margin: 40px 0; font-family: 'Playfair Display', serif;">"I love you, Anbar Ahmedi."</p>
+            <p>But how do I put into words what my heart has known since the moment I first saw you? How do I describe the way you light up every room you walk into?</p>
+            <p>Let me try...</p>
+        </div>
+        <div class="nav">
+            <button onclick="showPage(1)">Back</button>
+            <button onclick="showPage(3)">Next</button>
+        </div>
+        <div class="page-number">2 / 3</div>
+    </div>
+
+    <!-- PAGE 3: THE ROMANTIC SPEECH -->
+    <div class="page" id="page3">
+        <div class="subject-text">My Heart Speaks</div>
+        <div class="content">
+            <p>Anbar, my love, my everything — when I think of you, I think of sunrise, of warmth spreading through my chest, of a feeling so deep it sometimes takes my breath away.</p>
+            
+            <p>Before you, I thought I knew what love was. I had read about it in books, heard about it in songs, seen it in movies. But none of those words, none of those melodies, none of those frames could have prepared me for the reality of loving you.</p>
+            
+            <p>You are not just my girlfriend — you are my confidante, my safe place, my home in a world that sometimes feels chaotic and cold. When I'm with you, everything makes sense. Your laugh is my favorite song, your smile my favorite view, your presence my greatest treasure.</p>
+            
+            <p>I love the way you think, the way you care so deeply about others, the way your eyes sparkle when you talk about the things you love. I love even the small moments — the quiet mornings, the silly jokes, the comfortable silence that says more than words ever could.</p>
+            
+            <p>I promise to love you not just when times are easy, but especially when they are hard. I promise to stand by you, to support your dreams, to celebrate your victories, and to hold your hand through every storm.</p>
+            
+            <p>You are the girl I want to build a future with. The one I want to grow old beside. The one who makes my heart beat faster and my soul feel at peace, all at the same time.</p>
+            
+            <p>So here I am, kneeling not with a ring — but with my heart wide open, saying these words that have been waiting to be spoken:</p>
+            
+            <p style="text-indent: 0; text-align: center; font-size: 1.4rem; color: var(--text-gold); margin: 30px 0;">I love you, Anbar Ahmedi.<br>Completely. Deeply. Forever.</p>
+        </div>
+        <div class="signature">Your loving boyfriend,<br>Drumstick</div>
+        <div class="nav">
+            <button onclick="showPage(2)">Back</button>
+            <button disabled>Next</button>
+        </div>
+        <div class="page-number">3 / 3</div>
+    </div>
+</div>
+
+<script>
+    function showPage(pageNum) {
+        // Hide all pages
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
+        
+        // Show the requested page
+        document.getElementById('page' + pageNum).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
